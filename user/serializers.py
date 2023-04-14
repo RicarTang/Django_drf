@@ -10,6 +10,6 @@ class UserSerializer(serializers.ModelSerializer):
         exclude = ('password',)  # id不参与序列化，剔除不需要序列化的字段,不能与fields同时使用
         read_only_fields = ("id",)  # id不参与反序列化
         # 定义字段校验规则
-        # extra_kwargs = {
-        #     "phone": {"max_value":18},
-        # }
+        extra_kwargs = {
+            "phone": {"max_length":18,"required":False},
+        }

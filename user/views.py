@@ -18,7 +18,6 @@ def users(request):
 @api_view(["POST"])
 def create(request):
     ser = UserSerializer(data=request.data)
-    print(ser)
     if ser.is_valid():
         ser.save()
         return Response(
