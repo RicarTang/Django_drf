@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.douban.com/simple"
+verify_ssl = true
+name = "pip_conf_index_global"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+pymysql = "*"
+cryptography = "*"
+
+[dev-packages]
+black = "*"
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+dev = "python manage.py runserver" 
+startapp = "python manage.py startapp"  
+make = "python manage.py makemigrations"  
+migrate = "python manage.py migrate" 
